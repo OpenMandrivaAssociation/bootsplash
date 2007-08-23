@@ -22,7 +22,7 @@ Requires: kernel initscripts > 7.04-15mdk fbgrab
 Requires: perl-Archive-Cpio
 Conflicts: drakxtools-newt < 10-49mdk
 Obsoletes: Aurora Aurora-Monitor-NewStyle-Categorizing-WsLib Aurora-Monitor-NewStyle-WsLib Aurora-Monitor-Traditional-Gtk+ Aurora-Monitor-Traditional-WsLib-8.2
-BuildRequires: freetype2-static-devel libmng-static-devel libjpeg-static-devel glibc-static-devel liblcms-devel gtk-linux-fb-2.0-devel gtk+2-devel
+BuildRequires: freetype2-static-devel libmng-static-devel libjpeg-static-devel glibc-static-devel lcms-devel gtk-linux-fb-2.0-devel gtk+2-devel
 # nomore noarch with the fbrelolution and progress binaries
 #BuildArchitectures: noarch
 
