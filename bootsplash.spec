@@ -1,6 +1,6 @@
 %define name bootsplash
-%define version 3.2.8
-%define release %mkrel 2
+%define version 3.2.9
+%define release %mkrel 1
 %define _bootdir /boot
 
 Summary: The Boot Splash Images and scripts
@@ -8,7 +8,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 # From Mandriva SVN
-Source0: %{name}.tar
+Source0: %{name}-%version.tar.bz2
 License: GPL
 Group: System/Kernel and hardware
 BuildRoot: %{_tmppath}/%{name}-buildroot
