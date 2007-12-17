@@ -11,7 +11,6 @@ Release: %{release}
 Source0: %{name}-%version.tar.bz2
 License: GPL
 Group: System/Kernel and hardware
-BuildRoot: %{_tmppath}/%{name}-buildroot
 Url:       http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/bootsplash/
 Requires: perl-base
 # Do not require mkinitrd anymore to be able to be prerequed by mkinitrd (mkinitrd is in basesystem anyway)
