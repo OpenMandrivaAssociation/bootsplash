@@ -70,7 +70,9 @@ do
             break
         fi
 done
+%if %mdkversion < 200900
 /sbin/ldconfig
+%endif
     
 %clean
 rm -rf $RPM_BUILD_ROOT
