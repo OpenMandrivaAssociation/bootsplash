@@ -1,5 +1,5 @@
 %define name bootsplash
-%define version 3.2.12
+%define version 3.2.13
 %define release %mkrel 1
 %define _bootdir /boot
 
