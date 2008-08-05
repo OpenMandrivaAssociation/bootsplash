@@ -1,7 +1,6 @@
 %define name bootsplash
 %define version 3.2.15
 %define release %mkrel 1
-%define _bootdir /boot
 
 Summary: The Boot Splash Images and scripts
 Name: %{name}
