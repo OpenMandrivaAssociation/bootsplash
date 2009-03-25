@@ -1,5 +1,5 @@
 %define name bootsplash
-%define version 3.2.20
+%define version 3.2.21
 %define release %mkrel 1
 
 Summary: The Boot Splash Images and scripts
