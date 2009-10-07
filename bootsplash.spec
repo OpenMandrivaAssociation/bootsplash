@@ -1,5 +1,5 @@
 %define name bootsplash
-%define version 3.2.26
+%define version 3.3.0
 %define release %mkrel 1
 
 Summary: Scripts to handle Mandriva themeing
@@ -17,13 +17,12 @@ Requires: perl-base
 # Requires: mkinitrd >= 3.5.18-14mdk
 Conflicts: mkinitrd < 3.5.18-14mdk
 #there is no way to say a special kernel requires.
-Requires: kernel initscripts > 7.04-15mdk fbgrab
+Requires: kernel initscripts > 7.04-15mdk 
 Requires: perl-Archive-Cpio
+Suggests: drakx-kbd-mouse-x11
+Requires: plymouth-scripts
 Conflicts: drakxtools-newt < 10-49mdk
-Obsoletes: Aurora Aurora-Monitor-NewStyle-Categorizing-WsLib Aurora-Monitor-NewStyle-WsLib Aurora-Monitor-Traditional-Gtk+ Aurora-Monitor-Traditional-WsLib-8.2
-BuildRequires: freetype2-static-devel libmng-static-devel libjpeg-static-devel glibc-static-devel lcms-devel gtk-linux-fb-2.0-devel gtk+2-devel
-# nomore noarch with the fbrelolution and progress binaries
-#BuildArchitectures: noarch
+BuildArchitectures: noarch
 
 %description
 This package contains the scripts necessary to install and change the theme 
@@ -39,10 +38,6 @@ make LIB=%{_lib}
 rm -rf %{buildroot}
 make install prefix=%{buildroot}
 
-install -d -m755 %{buildroot}%{_sysconfdir}/%{name}
-install -d -m755 %{buildroot}%{_sysconfdir}/%{name}/themes
-install -d -m755 %{buildroot}%{_datadir}/%{name}/themes
-
 %clean
 rm -rf %{buildroot}
 
@@ -50,10 +45,7 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README ChangeLog 
 %config(noreplace) %{_sysconfdir}/sysconfig/%{name}
-%dir %{_sysconfdir}/%{name}
-%dir %{_sysconfdir}/%{name}/themes
 %dir %{_datadir}/%{name}
-%dir %{_datadir}/%{name}/themes
 %{_datadir}/%{name}/scripts
 
 
