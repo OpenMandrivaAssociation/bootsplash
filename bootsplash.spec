@@ -1,6 +1,6 @@
 %define name bootsplash
 %define version 3.3.3
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Scripts to handle Mandriva themeing
 Name: %{name}
