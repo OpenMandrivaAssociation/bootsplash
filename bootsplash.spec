@@ -1,27 +1,23 @@
-%define name bootsplash
-%define version 3.3.3
-%define release %mkrel 3
-
-Summary: Scripts to handle Mandriva themeing
-Name: %{name}
-Version: %{version}
-Release: %{release}
-# From Mandriva SVN
-Source0: %{name}-%version.tar.bz2
-License: GPL
-Group: System/Kernel and hardware
-BuildRoot: %{_tmppath}/%{name}-buildroot
-Url:       http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/bootsplash/
-Requires: perl-base
+Summary:	Scripts to handle Mandriva themeing
+Name:		bootsplash
+Version:	3.4.0
+Release:	1
+# Generate from a git checkout using
+# git archive --format=tar --prefix=bootsplash-%version/ -o bootsplash-%version.tar master ; xz -9e bootsplash-%version.tar
+Source0:	%{name}-%version.tar.xz
+License:	GPL
+Group:		System/Kernel and hardware
+Url:		http://git.mandriva.com/projects/?p=soft/bootsplash.git
+Requires:	perl-base
 # Do not require mkinitrd anymore to be able to be prerequed by mkinitrd (mkinitrd is in basesystem anyway)
 # Requires: mkinitrd >= 3.5.18-14mdk
-Conflicts: mkinitrd < 3.5.18-14mdk
+Conflicts:	mkinitrd < 3.5.18-14mdk
 #there is no way to say a special kernel requires.
-Requires: kernel initscripts > 7.04-15mdk 
-Requires: perl-Archive-Cpio
-Suggests: drakx-kbd-mouse-x11
-Requires: plymouth-scripts
-Conflicts: drakxtools-newt < 10-49mdk
+Requires:	kernel initscripts > 7.04-15mdk 
+Requires:	perl-Archive-Cpio
+Suggests:	drakx-kbd-mouse-x11
+Requires:	plymouth-scripts
+Conflicts:	drakxtools-newt < 10-49mdk
 BuildArchitectures: noarch
 
 %description
@@ -47,5 +43,3 @@ rm -rf %{buildroot}
 %config(noreplace) %{_sysconfdir}/sysconfig/%{name}
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/scripts
-
-
