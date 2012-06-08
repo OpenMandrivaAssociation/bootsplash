@@ -1,10 +1,11 @@
 Summary:	Scripts to handle Mandriva themeing
 Name:		bootsplash
 Version:	3.4.0
-Release:	1
+Release:	2
 # Generate from a git checkout using
 # git archive --format=tar --prefix=bootsplash-%version/ -o bootsplash-%version.tar master ; xz -9e bootsplash-%version.tar
 Source0:	%{name}-%version.tar.xz
+Patch0:		bootsplash-3.4.0-fix-xz-compression-settings.patch
 License:	GPL
 Group:		System/Kernel and hardware
 Url:		http://git.mandriva.com/projects/?p=soft/bootsplash.git
@@ -26,6 +27,7 @@ used by Mandriva (at boot time and in desktop sessions)
 
 %prep
 %setup -q
+%patch0 -p1 -b .xz_crc32~
 
 %build
 make LIB=%{_lib}
