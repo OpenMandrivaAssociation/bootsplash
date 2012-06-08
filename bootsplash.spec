@@ -33,14 +33,9 @@ used by Mandriva (at boot time and in desktop sessions)
 make LIB=%{_lib}
 
 %install
-rm -rf %{buildroot}
 make install prefix=%{buildroot}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc README ChangeLog 
 %config(noreplace) %{_sysconfdir}/sysconfig/%{name}
 %dir %{_datadir}/%{name}
