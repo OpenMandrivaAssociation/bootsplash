@@ -1,28 +1,24 @@
-%define name bootsplash
-%define version 3.3.3
-%define release %mkrel 4
-
-Summary: Scripts to handle Mandriva themeing
-Name: %{name}
-Version: %{version}
-Release: %{release}
+Summary:	Scripts to handle Mandriva themeing
+Name:		bootsplash
+Version:	3.3.3
+Release:	5
 # From Mandriva SVN
-Source0: %{name}-%version.tar.bz2
-License: GPL
-Group: System/Kernel and hardware
-BuildRoot: %{_tmppath}/%{name}-buildroot
-Url:       http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/bootsplash/
-Requires: perl-base
+Source0:	%{name}-%version.tar.bz2
+License:	GPL
+Group:		System/Kernel and hardware
+Url:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/bootsplash/
+Requires:	perl-base
 # Do not require mkinitrd anymore to be able to be prerequed by mkinitrd (mkinitrd is in basesystem anyway)
 # Requires: mkinitrd >= 3.5.18-14mdk
-Conflicts: mkinitrd < 3.5.18-14mdk
+Conflicts:	mkinitrd < 3.5.18-14mdk
 #there is no way to say a special kernel requires.
-Requires: kernel initscripts > 7.04-15mdk 
-Requires: perl-Archive-Cpio
-Suggests: drakx-kbd-mouse-x11
-Requires: plymouth-scripts
-Conflicts: drakxtools-newt < 10-49mdk
-BuildArchitectures: noarch
+Requires:	kernel
+Requires:	initscripts > 7.04-15mdk 
+Requires:	perl-Archive-Cpio
+Suggests:	drakx-kbd-mouse-x11
+Requires:	plymouth-scripts
+Conflicts:	drakxtools-newt < 10-49mdk
+BuildArchitectures:	noarch
 
 %description
 This package contains the scripts necessary to install and change the theme 
@@ -35,14 +31,9 @@ used by Mandriva (at boot time and in desktop sessions)
 make LIB=%{_lib}
 
 %install
-rm -rf %{buildroot}
 make install prefix=%{buildroot}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc README ChangeLog 
 %config(noreplace) %{_sysconfdir}/sysconfig/%{name}
 %dir %{_datadir}/%{name}
@@ -251,7 +242,7 @@ rm -rf %{buildroot}
 * Thu Sep 08 2005 Warly <warly@mandriva.com> 3.1.9-1mdk
 - update po
 
-* Fri Aug 12 2005 Nicolas Lécureuil <neoclust@mandriva.org> 3.1.8-2mdk
+* Fri Aug 12 2005 Nicolas LÃ©cureuil <neoclust@mandriva.org> 3.1.8-2mdk
 - fix url
 - s/Mandrakelinux/Mandriva Linux/
 - mkrel
