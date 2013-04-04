@@ -3,7 +3,7 @@ Name:		bootsplash
 Version:	3.4.0
 Release:	3
 # From Mandriva SVN
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.xz
 License:	GPL
 Group:		System/Kernel and hardware
 Url:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/bootsplash/
