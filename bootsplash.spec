@@ -1,7 +1,7 @@
 Summary:	Scripts to handle Mandriva themeing
 Name:		bootsplash
 Version:	3.4.1
-Release:	1
+Release:	2
 # From Mandriva SVN
 Source0:	%{name}-%{version}.tar.xz
 License:	GPL
@@ -16,7 +16,7 @@ Conflicts:	mkinitrd < 3.5.18-14mdk
 Requires:	kernel
 Requires:	initscripts > 7.04-15mdk
 Requires:	perl-Archive-Cpio
-Suggests:	drakx-kbd-mouse-x11 > 0.102-4
+Suggests:	drakx-kbd-mouse-x11 >= 0.102-4
 Requires:	plymouth-scripts
 Conflicts:	drakxtools-newt < 10-49mdk
 BuildArch:	noarch
