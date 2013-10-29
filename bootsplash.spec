@@ -1,12 +1,12 @@
 Summary:	Scripts to handle Mandriva themeing
 Name:		bootsplash
-Version:	3.4.0
-Release:	3
+Version:	3.4.1
+Release:	1
 # From Mandriva SVN
 Source0:	%{name}-%{version}.tar.xz
 License:	GPL
 Group:		System/Kernel and hardware
-Url:		http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/bootsplash/
+Url:		http://abf.rosalinux.ru/omv_software/bootsplash/
 Patch0:		bootsplash-3.4.0-fix-xz-compression-settings.patch
 Requires:	perl-base
 # Do not require mkinitrd anymore to be able to be prerequed by mkinitrd (mkinitrd is in basesystem anyway)
@@ -16,7 +16,7 @@ Conflicts:	mkinitrd < 3.5.18-14mdk
 Requires:	kernel
 Requires:	initscripts > 7.04-15mdk
 Requires:	perl-Archive-Cpio
-Suggests:	drakx-kbd-mouse-x11
+Suggests:	drakx-kbd-mouse-x11 > 0.102-4
 Requires:	plymouth-scripts
 Conflicts:	drakxtools-newt < 10-49mdk
 BuildArch:	noarch
