@@ -19,7 +19,9 @@ Requires:	kernel
 Requires:	initscripts > 7.04-15mdk
 Requires:	perl-Archive-Cpio
 Suggests:	drakx-kbd-mouse-x11 >= 0.102-4
+%ifnarch %arm aarch64
 Requires:	plymouth-scripts
+%endif
 Conflicts:	drakxtools-newt < 10-49mdk
 BuildArch:	noarch
 
