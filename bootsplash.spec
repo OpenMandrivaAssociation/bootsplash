@@ -2,14 +2,13 @@
 
 Summary:	Scripts to handle Mandriva themeing
 Name:		bootsplash
-Version:	3.4.1
-Release:	14
+Version:	3.4.2
+Release:	1
 # From Mandriva SVN
 Source0:	%{name}-%{version}.tar.xz
 License:	GPL
 Group:		System/Kernel and hardware
 Url:		http://abf.rosalinux.ru/omv_software/bootsplash/
-Patch0:		bootsplash-3.4.0-fix-xz-compression-settings.patch
 Requires:	perl-base >= 5.20.1
 # Do not require mkinitrd anymore to be able to be prerequed by mkinitrd (mkinitrd is in basesystem anyway)
 # Requires: mkinitrd >= 3.5.18-14mdk
