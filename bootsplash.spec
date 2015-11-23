@@ -3,13 +3,12 @@
 Summary:	Scripts to handle Mandriva themeing
 Name:		bootsplash
 Version:	3.4.2
-Release:	1
+Release:	2
 # From Mandriva SVN
 Source0:	%{name}-%{version}.tar.xz
 License:	GPL
 Group:		System/Kernel and hardware
 Url:		http://abf.rosalinux.ru/omv_software/bootsplash/
-Requires:	perl-base >= 5.20.1
 # Do not require mkinitrd anymore to be able to be prerequed by mkinitrd (mkinitrd is in basesystem anyway)
 # Requires: mkinitrd >= 3.5.18-14mdk
 Conflicts:	mkinitrd < 3.5.18-14mdk
@@ -18,7 +17,6 @@ Conflicts:	mkinitrd < 3.5.18-14mdk
 Requires:	kernel
 %endif
 Requires:	initscripts > 7.04-15mdk
-Requires:	perl-Archive-Cpio
 Suggests:	drakx-kbd-mouse-x11 >= 1.2.1-2
 %ifnarch %arm aarch64
 Requires:	plymouth-scripts
