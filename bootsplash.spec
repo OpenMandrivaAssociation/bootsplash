@@ -3,7 +3,7 @@
 Summary:	Scripts to handle Mandriva themeing
 Name:		bootsplash
 Version:	3.4.2
-Release:	6
+Release:	7
 # From Mandriva SVN
 Source0:	%{name}-%{version}.tar.xz
 License:	GPL
