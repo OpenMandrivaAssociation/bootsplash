@@ -8,7 +8,7 @@ Release:	9
 Source0:	%{name}-%{version}.tar.xz
 License:	GPL
 Group:		System/Kernel and hardware
-Url:		http://abf.rosalinux.ru/omv_software/bootsplash/
+Url:		https://abf.rosalinux.ru/omv_software/bootsplash/
 # Do not require mkinitrd anymore to be able to be prerequed by mkinitrd (mkinitrd is in basesystem anyway)
 # Requires: mkinitrd >= 3.5.18-14mdk
 Conflicts:	mkinitrd < 3.5.18-14mdk
