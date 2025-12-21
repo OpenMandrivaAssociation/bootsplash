@@ -22,6 +22,7 @@ Requires:	plymouth-scripts
 %endif
 Conflicts:	drakxtools-newt < 10-49mdk
 
+BuildRequires:	make
 %description
 This package contains the scripts necessary to install and change the theme 
 used by Mandriva (at boot time and in desktop sessions).
